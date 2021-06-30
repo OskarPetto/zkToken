@@ -3,7 +3,7 @@ zkToken
 
 Description
 -----------
-I am interested in zk-SNARKS and after learning a bit about the theory I wanted to get some practical experience. So I decided to implement a Token that does not belong to an Ethereum address but to as specific hash. Tokens can only be spent if one knows the preimage of a the hash. In order to not reveal anything about the preimage the program uses zk-SNARKS, which are verified on chain. This means by using different addresses a user could potentially hide their identity.
+I am interested in zk-SNARKS and Smart Contracts after learning a bit about the theory I wanted to get some practical experience. So I decided to implement a Token that does not belong to an Ethereum address but to as specific hash. Tokens can only be spent if one knows the preimage of a the hash. In order to not reveal anything about the preimage the program uses zk-SNARKS, which are verified on chain using Zokrates. This means by using different addresses a user could potentially hide their identity.
 
 Implementation
 --------------
