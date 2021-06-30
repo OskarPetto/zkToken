@@ -1,0 +1,27 @@
+{
+  "name": "zktoken",
+  "version": "0.1.0",
+  "author": "Oskar Petto",
+  "description": "A token that is traded with zk-SNARKS",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OskarPetto/zkToken.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OskarPetto/zkToken/issues"
+  },
+  "homepage": "https://github.com/OskarPetto/zkToken#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "truffle": "^5.3.13",
+    "truffle-assertions": "^0.9.2",
+    "zokrates-js": "^1.0.33"
+  }
+}

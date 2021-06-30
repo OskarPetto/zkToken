@@ -1,0 +1,13 @@
+<div class="identity-chooser-container">
+  <h2>Choose an identity</h2>
+  <form class="identity-form" [formGroup]="secretPreimageForm" (ngSubmit)="submitUserInput()" >
+    <mat-form-field class="identity-form-input">
+      <mat-label>Secret Preimage</mat-label>
+      <input required minlength="5" matInput id="secretPreimage" formControlName="secretPreimage" />
+      <mat-error>
+        Secret Preimage must be at least 5 characters long.
+      </mat-error>
+    </mat-form-field>
+    <button class="identity-submit-button" mat-raised-button color="primary"type="submit" [disabled]='!secretPreimageForm.valid'>Choose</button>
+  </form>
+</div>

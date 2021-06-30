@@ -1,0 +1,30 @@
+@import "../../../variables";
+
+.mint-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-large;
+  box-sizing: border-box;
+}
+
+.mint-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-with-form-field {
+  width: 500px;
+  max-width: 90%;
+}
+
+.value-form-field {
+  margin-top: $space-small;
+}
+
+.mint-submit-button {
+  margin-top: $space-large;
+}

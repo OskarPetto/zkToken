@@ -1,0 +1,21 @@
+@import "../../../variables";
+
+
+.transfer-history-container {
+  margin-top: $space-small;
+  border: $border;
+  padding: $space-large;
+  border-radius: $space-small;
+}
+
+.transfer-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: $space-small;
+}
+
+.identity-hash {
+  overflow-wrap: break-word;
+  overflow: hidden;
+}

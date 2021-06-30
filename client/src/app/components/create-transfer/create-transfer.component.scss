@@ -1,0 +1,34 @@
+@import "../../../variables";
+
+.create-transfer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $space-large;
+  box-sizing: border-box;
+}
+
+.create-transfer-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-with-form-field {
+  width: 500px;
+  max-width: 90%;
+}
+
+.value-form-field {
+  margin-top: $space-small;
+}
+
+.create-transfer-submit-button {
+  margin-top: $space-large;
+}
+
+.create-transfer-info-text {
+  margin-top: $space-large;
+}

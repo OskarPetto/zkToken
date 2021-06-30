@@ -1,0 +1,37 @@
+<div>
+  <div class="header">
+    <h1 class="title">{{ title }}</h1>
+    <button
+      *ngIf="hasIdentity && !loadingText"
+      mat-raised-button
+      color="primary"
+      (click)="resetIdentity()"
+    >
+      Change identity
+    </button>
+  </div>
+  <div class="main">
+    <div class="content">
+      <div *ngIf="loadingText; else notLoading" class="loading-message">
+        <h1>{{ loadingText }}</h1>
+      </div>
+      <ng-template #notLoading>
+        <div *ngIf="hasIdentity; else identityChooser">
+          <zk-identity-overview></zk-identity-overview>
+          <zk-transfer-history></zk-transfer-history>
+          <button
+            mat-raised-button
+            color="primary"
+            class="transfer-button"
+            (click)="openTransferDialog()"
+          >
+            Transfer
+          </button>
+        </div>
+        <ng-template #identityChooser>
+          <zk-identity-chooser></zk-identity-chooser>
+        </ng-template>
+      </ng-template>
+    </div>
+  </div>
+</div>

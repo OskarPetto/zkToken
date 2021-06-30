@@ -1,0 +1,17 @@
+<div class="transfer-history-container">
+  <h2>Transfer History</h2>
+  <div class="transfer-grid">
+    <div>From</div>
+    <div>To</div>
+    <div>Value</div>
+    <div>Block</div>
+    <ng-container *ngFor="let transfer of transfers">
+      <div class="identity-hash" *ngIf="transfer.from === identity?.hash">You</div>
+      <div class="identity-hash" *ngIf="transfer.from !== identity?.hash">{{ shortenHash(transfer.from) }}</div>
+      <div class="identity-hash" *ngIf="transfer.to === identity?.hash">You</div>
+      <div class="identity-hash" *ngIf="transfer.to !== identity?.hash">{{ shortenHash(transfer.to) }}</div>
+      <div>{{ transfer.value }}</div>
+      <div>{{ transfer.blockNumber }}</div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="identity-overview-container">
+<h2>Identity Overview</h2>
+<div class="identity-overview-grid">
+  <div>Identity: </div>
+  <div class="identity-hash" *ngIf="identity$ | async as identity">{{shortenHash(identity.hash)}}</div>
+  <div>Balance: </div>
+  <div *ngIf="balance$ | async as balance">{{balance}}</div>
+</div>
+</div>

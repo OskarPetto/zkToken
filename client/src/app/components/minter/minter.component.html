@@ -1,0 +1,20 @@
+<ng-container *ngIf="isMinter$ | async as isMinter">
+  <div *ngIf="isMinter" class="mint-container">
+      <h2>Mint ZKTokens</h2>
+      <form class="mint-form" [formGroup]="mintForm" (ngSubmit)="submitMint()" >
+        <mat-form-field class="full-with-form-field">
+          <mat-label>To</mat-label>
+          <input required matInput #toHash maxlength="64" minlength="64" formControlName="toHash" />
+          <mat-hint align="end">{{toHash.value.length}} / 64</mat-hint>
+          <mat-error>
+            To must be a 64 digit hex number.
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-with-form-field value-form-field">
+          <mat-label>Amount</mat-label>
+          <input required type="number" matInput #value formControlName="value" />
+        </mat-form-field>
+        <button class="mint-submit-button" mat-raised-button color="primary"type="submit" [disabled]='!mintForm.valid'>Mint</button>
+      </form>
+    </div>
+</ng-container>

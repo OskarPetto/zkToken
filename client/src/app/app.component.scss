@@ -1,0 +1,43 @@
+@import '../variables';
+
+.header {
+  padding: $space-large;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $border;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 800px;
+  max-width: 100%;
+  padding: 0 $space-small 0 $space-small;
+  box-sizing: border-box;
+}
+
+.loading-message {
+  margin-top: $space-large;
+  display: flex;
+  justify-content: center;
+}
+
+.transfer-button {
+  position: fixed;
+  bottom: $space-large;
+  right: $space-large; 
+}

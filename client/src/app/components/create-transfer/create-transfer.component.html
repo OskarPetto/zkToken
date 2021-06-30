@@ -1,0 +1,35 @@
+<div class="create-transfer-container">
+  <h2>Transfer ZKTokens</h2>
+  <form class="create-transfer-form" [formGroup]="createTransferForm" (ngSubmit)="submitTransfer()" >
+    <mat-form-field appearance="standard" class="full-with-form-field">
+      <mat-label>Account</mat-label>
+      <mat-select
+        formControlName="account" 
+        (selectionChange)="setAccount($event.value)"
+      >
+        <mat-option *ngFor="let account of accounts" [value]="account">
+          {{ account }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="full-with-form-field">
+      <mat-label>To</mat-label>
+      <input required matInput #toHash maxlength="64" minlength="64" formControlName="toHash" />
+      <mat-hint align="end">{{toHash.value.length}} / 64</mat-hint>
+      <mat-error>
+        To must be a 64 digit hex number.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-with-form-field value-form-field">
+      <mat-label>Amount</mat-label>
+      <input required type="number" matInput #value formControlName="value" />
+      <mat-error>
+        Insufficient funds.
+      </mat-error>
+    </mat-form-field>
+    <button *ngIf="!loadingText" class="create-transfer-submit-button" mat-raised-button color="primary"type="submit" [disabled]='!createTransferForm.valid'>Transfer</button>
+    <div *ngIf="loadingText" class="create-transfer-info-text">{{loadingText}}</div>
+  </form>
+</div>
+<zk-minter></zk-minter>
+

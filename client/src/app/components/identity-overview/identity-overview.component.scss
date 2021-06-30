@@ -1,0 +1,27 @@
+@import "../../../variables";
+
+.identity-overview-container {
+  margin-top: $space-small;
+  border-radius: $space-small;
+  border: $border;
+  padding: $space-large;
+  overflow: hidden;
+}
+
+.identity-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  grid-gap: $space-small;
+}
+
+.identity-element {
+  display: flex;
+  align-items: center;
+}
+
+.identity-hash {
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
